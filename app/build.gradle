@@ -1,0 +1,14 @@
+plugins { id 'com.android.application' }
+android {
+    namespace 'in.aastha.promptstudio'
+    compileSdk 35
+    defaultConfig {
+        applicationId 'in.aastha.promptstudio'
+        minSdk 26
+        targetSdk 35
+        versionCode 310
+        versionName '3.1.0'
+    }
+    buildTypes { release { minifyEnabled false } }
+    compileOptions { sourceCompatibility JavaVersion.VERSION_17; targetCompatibility JavaVersion.VERSION_17 }
+}
