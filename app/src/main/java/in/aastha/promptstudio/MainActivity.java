@@ -1,7 +1,7 @@
 package in.aastha.promptstudio;
 
 import android.app.Activity;
-import android.app.PrintManager;
+import android.print.PrintManager;
 import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
@@ -187,6 +187,6 @@ public class MainActivity extends Activity {
                 }catch(Exception e){toast("Export failed: "+e.getMessage());}}
             exportText=null;exportTitle=null;exportFormat=null;}
     }
-    @Override protected void onBackPressed(){if(web.canGoBack())web.goBack();else super.onBackPressed();}
+    @Override public void onBackPressed(){if(web.canGoBack())web.goBack();else super.onBackPressed();}
     @Override protected void onDestroy(){if(web!=null){web.removeJavascriptInterface("AasthaAndroid");web.destroy();}if(printWeb!=null)printWeb.destroy();super.onDestroy();}
 }
